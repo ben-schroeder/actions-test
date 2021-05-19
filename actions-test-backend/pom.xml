@@ -32,6 +32,13 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+
+		<dependency>
+			<groupId>eu.benschroeder</groupId>
+			<artifactId>test-suite-junit5</artifactId>
+			<version>0.7</version>
+			<scope>test</scope>
+		</dependency>
 	</dependencies>
 
 	<build>
