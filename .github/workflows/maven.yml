@@ -33,5 +33,5 @@ jobs:
           key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
           restore-keys: ${{ runner.os }}-maven-
 
-      - name: Run mvn verify
-        run: mvn -B clean verify --file pom.xml
+      - name: Run mvn deploy
+        run: mvn -B clean deploy --file pom.xml
