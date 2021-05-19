@@ -12,6 +12,7 @@ class HelloControllerTest extends UnitTest {
     @Test
     void testSayHello() {
 
+        // WHEN
         final String hello = helloController.sayHello();
 
         thenAssert(hello).isEqualTo("Hello");
