@@ -8,9 +8,13 @@ on:
     paths:
       - 'actions-test-backend/**'	
 
+defaults:
+  run:
+    working-directory: 'actions-test-backend'
+
 jobs:
   build:
-
+    
     runs-on: ubuntu-latest
 
     steps:
