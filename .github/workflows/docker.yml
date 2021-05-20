@@ -47,8 +47,6 @@ jobs:
         
         with:
           push: true
-          tags: |
-            docker.pkg.github.com/${{ github.repository }}/actions-test-backend:${{ github.sha }}
-            docker.pkg.github.com/${{ github.repository }}/actions-test-backend:${{ BRANCH_NAME }}-latest     
+          tags: docker.pkg.github.com/${{ github.repository }}/actions-test-backend:${{ github.sha }}
         
   
