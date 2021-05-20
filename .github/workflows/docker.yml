@@ -41,7 +41,13 @@ jobs:
           registry: docker.pkg.github.com
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
-          
+      
+      - name: Extract artifact
+        run: |
+          mkdir -p target/dependency
+          cd target/dependency
+          jar -xf ../../actions-test-backend-0.0.1-SNAPSHOT.jar
+        
       - name: Build and push image
         uses: docker/build-push-action@v2
         
