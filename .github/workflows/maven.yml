@@ -35,3 +35,5 @@ jobs:
 
       - name: Run mvn deploy
         run: mvn -B clean deploy --file pom.xml
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
