@@ -53,5 +53,6 @@ jobs:
         
         with:
           context: .
+          file: './actions-test-backend/Dockerfile'
           push: true
           tags: docker.pkg.github.com/${{ github.repository }}/actions-test-backend:${{ github.sha }}
