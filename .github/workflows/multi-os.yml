@@ -1,5 +1,5 @@
 
-name: Maven Multi OS Build
+name: Maven Matrix Build
 
 on: workflow_dispatch
 
