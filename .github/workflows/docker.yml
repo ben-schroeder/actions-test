@@ -18,7 +18,7 @@ jobs:
       
     steps:
       - uses: actions/checkout@v2
-
+      - uses: nelonoel/branch-name@v1.0.1
       - name: Set up JDK 11
         uses: actions/setup-java@v2
         with:
@@ -44,10 +44,11 @@ jobs:
           
       - name: Build and push image
         uses: docker/build-push-action@v2
+        
         with:
           push: true
           tags: |
             docker.pkg.github.com/${{ github.repository }}/actions-test-backend:${{ github.sha }}
-            docker.pkg.github.com/${{ github.repository }}/actions-test-backend:${{ github.ref }}-latest     
+            docker.pkg.github.com/${{ github.repository }}/actions-test-backend:${BRANCH_NAME}-latest     
         
   
